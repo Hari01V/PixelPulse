@@ -1,10 +1,8 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Community from "./Community";
 import { useQuery } from "@airstack/airstack-react";
 import { ConnectKitButton } from "connectkit";
 import { useAccount } from "wagmi";
-const GET_VITALIK_LENS_FARCASTER_ENS = `
+const getTokenNfts = `
 query MyQuery($identity:Identity!) {
     Wallet(input: {identity: $identity, blockchain: ethereum}) {
       tokenBalances {
@@ -23,7 +21,7 @@ const Home = () => {
   console.log({ address, isConnecting, isDisconnected });
   localStorage.setItem("address", address);
   const { data, loading, error } = useQuery(
-    GET_VITALIK_LENS_FARCASTER_ENS,
+    getTokenNfts,
     {
       identity: address,
     },
