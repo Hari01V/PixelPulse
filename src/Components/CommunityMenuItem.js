@@ -3,7 +3,7 @@ import React from "react";
 const CommunityMenuItem = () => {
 
     return (
-        <div className="w-full flex justify-start items-center gap-2 py-4 border-b-[1px] cursor-pointer hover:backdrop-brightness-[80%]">
+        <div className="w-full flex justify-start items-center gap-2 px-2 py-4 border-b-[1px] cursor-pointer hover:backdrop-brightness-[80%]">
             {/* Pic */}
             <div className="w-[48px] h-[48px] bg-white rounded-full">
 
