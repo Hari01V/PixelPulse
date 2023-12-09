@@ -9,7 +9,7 @@ const Community = () => {
     return (
         <div className="h-full w-full rounded-2xl flex justify-between items-center gap-2">
             {/* Community Menu */}
-            <div className="w-[30%] max-w-[320px] h-full p-1 rounded-2xl flex flex-col justify-between items-center gap-2">
+            <div className="w-[30%] max-w-[320px] h-full p-1 pr-0 rounded-2xl flex flex-col justify-between items-center gap-2">
                 {/* Menu Header */}
                 <div className="w-full px-3 py-4 bg-violet-800 text-white flex justify-between items-center gap-4 rounded-xl">
                     <h1 className="text-lg font-bold capitalize">Hub</h1>
@@ -25,7 +25,22 @@ const Community = () => {
                     </div>
                 </div>
                 {/* Menu Items */}
-                <div className="w-full h-full px-6 py-4 bg-violet-800 text-white flex flex-col justify-start items-center rounded-xl">
+                <div className="w-full h-full px-6 py-4 bg-violet-800 text-white flex flex-col justify-start items-center rounded-xl overflow-y-auto">
+                    <CommunityMenuItem/>
+                    <CommunityMenuItem/>
+                    <CommunityMenuItem/>
+                    <CommunityMenuItem/>
+                    <CommunityMenuItem/>
+                    <CommunityMenuItem/>
+                    <CommunityMenuItem/>
+                    <CommunityMenuItem/>
+                    <CommunityMenuItem/>
+                    <CommunityMenuItem/>
+                    <CommunityMenuItem/>
+                    <CommunityMenuItem/>
+                    <CommunityMenuItem/>
+                    <CommunityMenuItem/>
+                    <CommunityMenuItem/>
                     <CommunityMenuItem/>
                     <CommunityMenuItem/>
                     <CommunityMenuItem/>
