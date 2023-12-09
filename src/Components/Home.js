@@ -30,11 +30,11 @@ const Home = () => {
     { cache: false }
   );
   console.log({ data });
+
   return (
-    <div className="h-screen w-screen bg-orange-400 p-8 flex justify-between items-center gap-2">
+    <div className="w-full h-full px-6 py-4 bg-violet-800 flex justify-between items-center gap-2 rounded-xl">
       <ConnectKitButton />
-      <Navbar />
-      <Community />
+      HOME
     </div>
   );
 };

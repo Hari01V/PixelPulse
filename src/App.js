@@ -3,6 +3,12 @@ import "./App.css";
 import Home from "./Components/Home";
 import { WagmiConfig, createConfig } from "wagmi";
 import { ConnectKitProvider, getDefaultConfig } from "connectkit";
+import Navbar from "./Components/Navbar";
+import { useState } from "react";
+import CommunityContainer from "./Components/CommunityContainer";
+import BrowsePage from "./Components/BrowsePage";
+import UserProfile from "./Components/UserProfile";
+
 const config = createConfig(
   getDefaultConfig({
     alchemyId: process.env.REACT_APP_ALCHEMY_ID, // or infuraId
@@ -32,9 +38,12 @@ const MyCustomAvatar = ({ address, ensImage, ensName, size, radius }) => {
     </div>
   );
 };
+
 function App() {
+  const [currentNav, setCurrentNav] = useState("home");
+
   return (
-    <div className="App">
+    <div className="App h-screen w-screen p-8 bg-red-600 flex justify-between items-center gap-2">
       <WagmiConfig config={config}>
         <ConnectKitProvider
           theme="nouns"
@@ -42,8 +51,12 @@ function App() {
             customAvatar: MyCustomAvatar,
           }}
         >
+          <Navbar currentNav={currentNav} setCurrentNav={setCurrentNav} />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/communities" element={<CommunityContainer />} />
+            <Route path="/browse" element={<BrowsePage />} />
+            <Route path="/profile" element={<UserProfile />} />
           </Routes>
         </ConnectKitProvider>
       </WagmiConfig>
