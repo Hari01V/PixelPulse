@@ -38,7 +38,7 @@ const UserProfile = () => {
                 </div>
                 <div className="my-4 flex flex-col justify-start items-start text-start flex-grow">
                     <h1 className="text-4xl font-bold uppercase tracking-widest mb-6">Name</h1>
-                    <h2 className="text-xl tracking-widest">Meta Address</h2>
+                    <h2 className="text-xl tracking-widest">{localStorage.getItem("address") ? localStorage.getItem("address") : "Meta Address"}</h2>
                     <p className="text-[14px] tracking-wider">User since 2 days ago</p>
                     <p className="text-[13px] tracking-wide mt-4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eros ligula, accumsan lobortis massa a, feugiat fermentum dolor. Nulla facilisi. Pellentesque aliquam lectus quis erat aliquet tempor. Fusce condimentum eu sapien id imperdiet. In sed tellus quam. Maecenas vehicula mauris rutrum eros euismod consequat.
