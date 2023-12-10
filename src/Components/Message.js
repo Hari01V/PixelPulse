@@ -9,7 +9,7 @@ const Message = (props) => {
         <div className="w-full">
             {sender == currentUser ? 
                 // Right Side
-                <div className="w-fit max-w-[540px] pl-4 pr-14 py-3 bg-red-500 ml-auto flex justify-between items-center relative rounded-xl rounded-tr-none">
+                <div className="w-fit max-w-[540px] pl-4 pr-14 py-3 bg-gray-900 ml-auto flex justify-between items-center relative rounded-xl rounded-tr-none">
                     <p className="mr-2 text-left">
                         {message}
                     </p>
@@ -18,10 +18,10 @@ const Message = (props) => {
             :
                 // Left Side
                 <div className="flex justify-between items-start gap-2">
-                    <div className="w-[40px] h-[40px] bg-white rounded-full">
+                    <div className="w-[40px] h-[40px] bg-[#ebebeb] rounded-full">
 
                     </div>  
-                    <div className="w-fit max-w-[540px] pl-4 pr-14 py-3 bg-red-500 mr-auto flex justify-between items-center relative rounded-xl rounded-tl-none"> 
+                    <div className="w-fit max-w-[540px] pl-4 pr-14 py-3 bg-gray-900 mr-auto flex justify-between items-center relative rounded-xl rounded-tl-none"> 
                         <p className="mr-2 text-left">
                             {message}
                         </p>

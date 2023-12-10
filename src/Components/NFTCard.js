@@ -1,6 +1,6 @@
 import React from "react";
 
-const CommunityCard = (props) => {
+const NFTCard = (props) => {
     const {} = props;
 
     return (
@@ -9,10 +9,10 @@ const CommunityCard = (props) => {
             <div className="w-[160px] h-[160px] bg-[#ebebeb] rounded-full">
 
             </div>
-            <h1 className="text-[20px]">Community Name</h1>
-            <button className="w-full px-6 py-2 bg-black rounded-xl text-[12px] tracking-widest uppercase shadow-md shadow-white hover:border-[1px] hover:border-[#cfcfcf]">Join</button>
+            <h1 className="text-[20px]">NFT Name</h1>
+            <button className="w-full px-6 py-2 bg-black rounded-xl text-[12px] tracking-widest uppercase shadow-md shadow-white hover:border-[1px] hover:border-[#cfcfcf]">View</button>
         </div>
     )
 }
 
-export default CommunityCard;
+export default NFTCard;

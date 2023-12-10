@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import "./App.scss";
 import Home from "./Components/Home";
 import { WagmiConfig, createConfig } from "wagmi";
 import { ConnectKitProvider, getDefaultConfig } from "connectkit";
@@ -43,7 +44,12 @@ function App() {
   const [currentNav, setCurrentNav] = useState("home");
 
   return (
-    <div className="App h-screen w-screen p-8 bg-black flex justify-between items-center gap-2 relative">
+    <div className="App h-screen w-screen p-8 flex justify-between items-center gap-2 relative">
+      <div className="w-full h-full absolute top-0 left-0 -z-10">
+        {new Array(100).fill('').map(() => (
+          <div className="snow"></div>
+        ))}
+      </div>
       <WagmiConfig config={config}>
         <ConnectKitProvider
           theme="nouns"
