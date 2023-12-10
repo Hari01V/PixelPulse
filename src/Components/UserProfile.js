@@ -1,7 +1,34 @@
+import { useQuery } from "@airstack/airstack-react";
 import React from "react";
 import NFTCard from "./NFTCard";
 
+const getNfts = `
+query MyQuery($identity: Identity!) {
+  Wallet(input: {identity: $identity, blockchain: ethereum}) {
+    tokenBalances {
+      tokenNfts {
+        address
+        metaData {
+          image
+          name
+        }
+      }
+    }
+  }
+}
+`;
+
 const UserProfile = () => {
+    const { data, loading, error } = useQuery(
+        getNfts,
+        {
+            identity: localStorage.getItem("address"),
+        },
+        { cache: false }
+    );
+    console.log({
+        someData: data,
+    });
 
     return (
         <div className="w-full h-full p-12 text-[#cfcfcf] bg-gray-800 flex flex-col justify-between items-center gap-6 rounded-xl overflow-y-scroll">
